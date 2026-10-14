@@ -40,8 +40,18 @@ Exemple:
 '''
 
 def fibonacci(fibonacci_number):
-    # Write here your code
-    pass
+    if not isinstance(fibonacci_number, int):
+        raise ValueError("Number must be integer.")
+    elif fibonacci_number < 0:
+        raise ValueError("Number must be greater than 0.")
+    else:
+        a, b = 0, 1    #a=0, b=1
+    for _ in range(fibonacci_number):
+        a, b = b, a + b    #a=b=1, b=a+b=1+1
+    return a
+
+resultado = fibonacci(10)
+print(resultado)
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
