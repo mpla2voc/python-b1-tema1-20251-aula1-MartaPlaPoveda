@@ -46,13 +46,21 @@ Els valors dels paràmetres que rep aquesta funció són:
 
 """
 
-import matplotlib.pyplot as plt
-
 # Esta función deberá configurar la gráfica en la variable plt
 # Aquesta funció haurà de configurar la gràfica en la variable plt
+
+import matplotlib.pyplot as plt
+
 def line_graph(x, y):
-    # Write here your code
-    pass
+    plt.plot(x, y)
+    plt.xlabel('Axis X')
+    plt.ylabel('Axis Y')
+    plt.title('Graph')
+    plt.grid(True)
+
+line_graph([1, 2, 3, 4, 5], [2, 4, 6, 8, 10])
+plt.show()
+plt.close()
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
