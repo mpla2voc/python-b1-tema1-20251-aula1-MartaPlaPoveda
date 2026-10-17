@@ -34,10 +34,14 @@ Exemple
 
 """
 
-
 def invert_list(lst):
-    # Write here your code
-    pass
+   if len(lst) == 0:
+        return []
+   else:
+        return invert_list(lst[1:]) + [lst[0]]
+lst = [1, 2, 3, 4, 5]
+
+print("Resultado:", invert_list(lst))
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
