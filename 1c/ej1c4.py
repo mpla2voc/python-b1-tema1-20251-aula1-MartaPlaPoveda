@@ -39,10 +39,16 @@ Exemple:
 
 """
 
-
 def is_palindrome(word):
-    # Write here your code
-    pass
+    if len(word) <= 1:
+        return True
+    elif word[0] != word[-1]:
+        return False
+    else:
+        return is_palindrome(word[1:-1])
+    
+word = "level"
+print(f"Is '{word}' word palindrome?", is_palindrome(word))
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
