@@ -38,8 +38,14 @@ Exemple:
 
 
 def find_max(lst):
-    # Write here your code
-    pass
+    if len(lst) == 1:
+        return lst[0]
+    else:
+        return max(lst[0], find_max(lst[1:]))
+
+numbers_list = [1, 5, 2, 7, 3]
+
+print("Resultado final:", find_max(numbers_list))
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
